@@ -8,7 +8,7 @@ const BikeItems = ({ bike }) => {
     const navigation = useNavigation();
 
     const handleClick = () => {
-        navigation.navigate("Screen_03");
+        navigation.navigate("Screen_03", { bike: bike });
     };
 
     return (
@@ -22,11 +22,11 @@ const BikeItems = ({ bike }) => {
 
                     <Image
                         source={{ uri: bike.image }}
-                        style={{ width: 50, height: 50 }}
+                        style={{ width: 80, height: 70 }}
                     ></Image>
 
                     <View>
-                        <Text style={{ marginTop: 20, fontSize: 18 }}>{bike.name}</Text>
+                        <Text style={{ marginTop: 5, fontSize: 18 }}>{bike.name}</Text>
 
                         <Text style={{ fontWeight: 'bold', fontSize: 25, marginTop: 12 }}>${bike.price}</Text>
                     </View>
