@@ -6,18 +6,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { AntDesign } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
 import Screen_01 from './src/screens/Screen_01';
 import Screen_02 from './src/screens/Screen_02';
 import Screen_03 from './src/screens/Screen_03';
 
+import Provider from './src/store/Provider';
 
-
-export default function App() {
+function App() {
 
   const Stack = createNativeStackNavigator();
-  const Tab = createBottomTabNavigator();
 
   return (
     <NavigationContainer>
@@ -34,14 +31,10 @@ export default function App() {
   );
 }
 
-// export default () => {
-//   return (
-//     <Provider>
-//       <App />
-//     </Provider>
-//   );
-// };
-
-const styles = StyleSheet.create({
-
-});
+export default () => {
+  return (
+    <Provider>
+      <App />
+    </Provider>
+  );
+};

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const httpRequest = axios.create({
-    baseURL: "https://6397507a77359127a033d21c.mockapi.io/api/v1",
+    baseURL: "https://63477bf70484786c6e8147db.mockapi.io/api/",
 });
 
 export default httpRequest;

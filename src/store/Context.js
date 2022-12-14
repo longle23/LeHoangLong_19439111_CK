@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const TaskContext = createContext();
+const BikeContext = createContext();
 
-export default TaskContext;
+export default BikeContext;
