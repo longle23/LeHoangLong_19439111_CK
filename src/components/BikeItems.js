@@ -16,16 +16,17 @@ const BikeItems = ({ bike }) => {
             <TouchableOpacity onPress={handleClick}>
                 <View style={{ alignItems: "center" }}>
                     <View>
-                        <AntDesign name="hearto" size={24} color="black" style={{ marginRight:90 }} />
+                        <AntDesign name="hearto" size={24} color="black" style={{ marginRight: 90 }} />
 
                     </View>
 
-                    <Image source={'https://res.cloudinary.com/dll7wnd2m/image/upload/v1670999592/xedap1_drrykj.jpg'} style={{ height: 70, width: 100 }} />
-
+                    <Image
+                        source={{ uri: bike.image }}
+                        style={{ width: 50, height: 50 }}
+                    ></Image>
 
                     <View>
                         <Text style={{ marginTop: 20, fontSize: 18 }}>{bike.name}</Text>
-
 
                         <Text style={{ fontWeight: 'bold', fontSize: 25, marginTop: 12 }}>${bike.price}</Text>
                     </View>
